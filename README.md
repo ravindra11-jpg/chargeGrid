@@ -18,10 +18,6 @@ ChargeGrid is a college-project simulation of the user-facing side of an EV char
 
 It is a full software demo rather than a hardware integration: the REST API, authentication tokens, journey logic, billing rules and optional database persistence are real parts of this project. The stations, vehicles, tariffs and payments are illustrative demo data. No real charger can be contacted and no real money moves.
 
-Live demo: [![Add your live demo link](https://img.shields.io/badge/Live_demo-TODO-lightgrey)](https://YOUR-LIVE-DEMO-LINK.example)
-
-![Find screen](docs/screenshots/find.png)
-![Charge screen](docs/screenshots/charge.png)
 
 ## Table of Contents
 
