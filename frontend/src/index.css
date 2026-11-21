@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body { @apply bg-page text-ink font-body antialiased; font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+  :focus-visible { outline: 3px solid #0d5c63; outline-offset: 2px; border-radius: 6px; }
+}
+@layer components {
+  .card { @apply bg-white border border-line rounded-2xl p-4; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand text-white hover:brightness-110; }
+  .btn-ghost { @apply btn bg-white border border-line text-ink hover:bg-page; }
+  .btn-danger { @apply btn bg-st-faulted text-white hover:brightness-110; }
+  .input { @apply w-full rounded-xl border border-line bg-white px-3 py-3 text-ink; }
+  .badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold; }
+  .num { font-variant-numeric: tabular-nums; }
+}
+@keyframes breathe { 0%,100% { opacity: 1 } 50% { opacity: .62 } }
+.ring-breathe { animation: breathe 2.4s ease-in-out infinite; }
+@keyframes plug { 0% { transform: translateX(-26px) } 100% { transform: translateX(0) } }
+.cable-move { animation: plug 1.2s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .ring-breathe, .cable-move { animation: none !important; }
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  nav, .no-print { display: none !important; }
+  body { background: #fff; }
+}
+.leaflet-container { font-family: inherit; }

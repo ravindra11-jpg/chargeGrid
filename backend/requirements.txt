@@ -1,0 +1,8 @@
+Flask>=3.0
+flask-cors>=4.0
+python-dotenv>=1.0
+supabase>=2.15
+paho-mqtt>=2.0
+itsdangerous>=2.1
+Werkzeug>=3.0
+pytest>=8.0
